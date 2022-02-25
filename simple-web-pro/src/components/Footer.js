@@ -1,0 +1,115 @@
+/* eslint-disable jsx-a11y/aria-props */
+import React from 'react'
+import './Footer.css'
+import { Button } from './Button'
+import { Link } from 'react-router-dom'
+
+function Footer() {
+  return (
+    <div className='footer-container'>
+      <section className='footer-subscription'>
+        <p className='footer-subscription-text'>
+          Join the 7DREAM Adventure newsletter to receive our best music
+        </p>
+        <p className='footer-subscription-text'>
+          You can unsubscribes at any time
+        </p>
+        <div className='inpit-areas'>
+          <form>
+            <input
+              className='footer-input'
+              name='email'
+              type='email'
+              placeholder='Your Email' 
+            />
+            <Button buttonStyle='btn--primary'>Subcribe</Button>
+          </form>
+        </div>
+      </section>
+      <div className='footer-links'>
+        <div className='footer-link-wrapper'>
+          <div className='footer-link-items'>
+            <h2>About Us</h2>
+            <Link to='/sign-up'>How it works</Link>
+            <Link to='/'>Testimonials</Link>
+            <Link to='/'>Careers</Link>
+            <Link to='/'>Investors</Link>
+            <Link to='/'>Term of Services</Link>
+          </div>
+          <div className='footer-link-items'>
+            <h2>Contact Us</h2>
+            <Link to='/'>Contact</Link>
+            <Link to='/'>Support</Link>
+            <Link to='/'>Destinantion</Link>
+            <Link to='/'>Sponsorship</Link>
+          </div>
+        </div>
+        <div className='footer-link-wrapper'>
+          <div className='footer-link-items'>
+            <h2>Videos</h2>
+            <Link to='/sign-up'>Submit Video</Link>
+            <Link to='/'>Brand Ambassadors</Link>
+            <Link to='/'>Agency</Link>
+            <Link to='/'>Influencer</Link>
+          </div>
+          <div className='footer-link-items'>
+            <h2>Social Media</h2>
+            <Link to='/'>Instagram</Link>
+            <Link to='/' >Facebook</Link>
+            <Link to='/'>Youtube</Link>
+            <Link to='/'>Twiter</Link>
+          </div>
+        </div>
+        <section className='social-media'>
+          <div className='social-media-wrap'>
+            <div className='footer-logo'>
+              <Link  to='/' className='social-logo'>
+                DREAM 
+                <i className='fab fa-typo3' />
+              </Link>
+            </div>
+            <small className='website-rights'>DREAM © 2022 </small>
+            <div className='social-icons'>
+              <Link
+                className='social-icon-link facebook'
+                to='/'
+                target='_blank'
+                aria-labels='Facebook'
+              >
+                <i className='fab fa-facebook-f' />
+              </Link>
+              <Link
+                className='social-icon-link instagram'
+                to='/'
+                target='_blank'
+                aria-labels='Instagram'
+              >
+                <i className='fab fa-instagram' />
+              </Link>
+              <Link
+                className='social-icon-link youtube'
+                to='/'
+                target='_blank'
+                aria-labels='Youtube'
+              >
+                <i className='fab fa-youtube' />
+              </Link>
+              <Link
+                className='social-icon-link twitter'
+                to='/'
+                target='_blank'
+                aria-labels='Twitter'
+              >
+                <i className='fab fa-twitter' />
+              </Link>
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+  )
+}
+
+export default Footer
